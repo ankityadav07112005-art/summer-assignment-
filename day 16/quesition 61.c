@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+int main() {
+    int n;
+    scanf("%d", &n);
+    int arr[100];
+    for(int i = 0; i < n - 1; i++) {
+        scanf("%d", &arr[i]);
+    }
+    int totalSum = (n * (n + 1)) / 2;
+    int currentSum = 0;
+    for(int i = 0; i < n - 1; i++) {
+        currentSum = currentSum + arr[i];
+    }
+    int missing = totalSum - currentSum;
+    printf("%d", missing);
+    return 0;
+}
